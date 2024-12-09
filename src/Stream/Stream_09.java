@@ -22,7 +22,7 @@ public class Stream_09 {
         *  mapToInt(ToIntFunction<T> mapper)
         *  mapToLong(ToLongFunction<T> mapper)
         *
-        *  flatMap(Function<T, Stream<R>> mapper
+        *  flatMap(Function<T, Stream<R>> mapper)
         *  flatMapToDouble(Function <T, DoubleStream> m)
         *  flatMapToInt(Function <T, IntStream> m)
         *  flatMapToLong(Function <T, LongStream> m)
@@ -30,7 +30,7 @@ public class Stream_09 {
         * 스트림의 연산 - 최종 연산
         *  void forEach(Consumer<? super T> action)
         *  void forEachOrdered(Consumer<? super T> action) (병렬 스트림의 순서 유지를 위해 사용하는 메서드) : 각 요소에 지정된 작업을 수행한다.
-        *  long count() : 스트림 요쇼의 개수 반환
+        *  long count() : 스트림 요소의 개수 반환
         *  Optional<T> max(Comparator<? super T> comparator)
         *  Optional<T> min(Comparator<? super T> comparator) : 스트림의 최대값/최소값을 반환
         *  Optional<T> findAny() : 스트림의 요소 하나를 반환 (아무거나), 주로 filter 와 함께 쓰인다.
