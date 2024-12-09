@@ -27,20 +27,26 @@ public class Stream_04 {
         * IntStream Arrays.stream(int[] array, int startInclusive, int endExclusive)
         * */
 
-//         Stream<String> strStream = Stream.of("a", "b", "c");
-//        Stream<String> strStream = Stream.of(new String[]{"a", "b", "c"});
-        Stream<String> strStream = Arrays.stream(new String[] {"a", "b", "c"});
-        strStream.forEach(System.out::println);
+        Stream<String> strStream = Stream.of("a", "b", "c");
+        Stream<String> strStream2 = Stream.of(new String[]{"a", "b", "c"});
+        Stream<String> strStream3 = Arrays.stream(new String[] {"a", "b", "c"});
+        strStream3.forEach(System.out::println);
 
-        int[] intArr = {1, 2, 3, 4, 5};
-        IntStream intStream = Arrays.stream(intArr);
+//        int[] intArr = {1, 2, 3, 4, 5};
+//        IntStream intStream = Arrays.stream(intArr);
 //        intStream.forEach(System.out::println);
+//
+//        intStream = Arrays.stream(intArr);
 //        System.out.println("sum=" + intStream.sum());
-        System.out.println("average=" + intStream.average());
+//
+//        intStream = Arrays.stream(intArr);
+//        System.out.println("average=" + intStream.average());
 
-//        Integer[] intArr = {1, 2, 3, 4, 5};
-//        Stream<Integer> intStream = Arrays.stream(intArr);  // 오토박싱
-//        intStream.forEach(System.out::println);
-//        System.out.println("count=" + intStream.count());
+        Integer[] intArr = {1, 2, 3, 4, 5};
+        Stream<Integer> intStream = Arrays.stream(intArr);  // 오토박싱
+        intStream.forEach(System.out::println);
+
+        intStream = Arrays.stream(intArr);
+        System.out.println("count=" + intStream.count());
     }
 }

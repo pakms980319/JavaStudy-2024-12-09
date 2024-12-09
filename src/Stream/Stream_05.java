@@ -41,9 +41,9 @@ public class Stream_05 {
 //                .limit(10)
 //                .forEach(System.out::println);
 
-        IntStream intStream3 = new Random().ints(10, 5, 10);  // 10개의 난수, 5 ~ 10 사이
-        intStream3
-                .limit(10)
-                .forEach(System.out::println);
+//        IntStream intStream3 = new Random().ints(10, 5, 10);  // 10개의 난수, 5 ~ 10 사이
+//        intStream3
+//                .limit(10)
+//                .forEach(System.out::println);
     }
 }
