@@ -3,7 +3,7 @@ package Stream;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-public class Stream11 {
+public class Stream_11 {
     /*
     * 스트림의 중간연산(2)
     * map()
@@ -36,7 +36,7 @@ public class Stream11 {
      *           .peek(s->System.out.printf("filename=%s\n", s))  // 파일명 출력
      *           .map(s->s.substring(s.indexOf('.'))+1))
      *           .peek(s->System.out.printf("extension=%s\n", s)) // 확장자를 출력
-     *           .forEach(System.out::print
+     *           .forEach(System.out::print)
      *
      * flatMap()
      * 스트림의 스트림을 스트림으로 변환
