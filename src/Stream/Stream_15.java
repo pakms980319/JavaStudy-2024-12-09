@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class Stream_15 {
     /*
-    * 스트림의 그룹화와 분할 (1)
+    * 스트림의 그룹화와 분할
     * partitioningBy() 는 스트림을 2분할한다.
     * Collector partitioningBy(Predicate predicate)
     * Collector partitioningBy(Predicate predicate, Collector downstream)
@@ -39,7 +39,6 @@ public class Stream_15 {
     * List<Student> failedMaleStu = failedStuBySex.get(true).get(true);
     * List<Student> failedFemaleStu = failedStuBySex.get(false).get(true);
     *
-    * groupingBy() 는 스트림을 n분할한다.
     * */
 
     public static void main(String[] args) {
