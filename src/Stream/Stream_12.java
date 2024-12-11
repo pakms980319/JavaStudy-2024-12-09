@@ -76,7 +76,7 @@ public class Stream_12 {
         // Optional<String> opt = null 에러는 발생하지 않지만 바람직하지 않다
         Optional<String> opt = Optional.empty();
         System.out.println(opt);  // Optional.empty
-        // System.out.println(opt.get()); 에러 발생, null 이라서
+        // System.out.println(opt.get()); // 에러 발생, null 이라서
         System.out.println(opt.orElse("EMPTY"));
         System.out.println(opt.orElseGet(()->"EMPTY"));
         System.out.println(opt.orElseGet(String::new));
