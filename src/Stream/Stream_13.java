@@ -23,8 +23,8 @@ public class Stream_13 {
     * IntStream.range(1, 10).sequential().forEach(System.out::print);  // 123456789
     * IntStream.range(1, 10).sequential().forEachOrdered(System.out:print);  // 123456789
     *
-    * IntStream.range(1, 10).sequential().forEach(System.out::print);  // 683295714
-    * IntStream.range(1, 10).sequential().forEachOrdered(System.out.print);  // 123456789
+    * IntStream.range(1, 10).parallel().forEach(System.out::print);  // 683295714
+    * IntStream.range(1, 10).parallel().forEachOrdered(System.out.print);  // 123456789
     *
     * 조건 검사 - allMatch(), anyMatch(), noneMatch()
     * boolean allMatch(Predicate<? super T> predicate)  // 모든 요소가 조건을 만족시키면 true
@@ -43,7 +43,7 @@ public class Stream_13 {
     *
     * reduce()
     * 스트림의 요소를 하나씩 줄여가며 누적연산 수행 (누적연산 : accumulator)
-    * Optional<T> recude(BinaryOperator<T> accumulator)
+    * Optional<T> reduce(BinaryOperator<T> accumulator)
     * T reduce(T identity, BinaryOperator<T> accumulator)
     * U reduce(U identity, BiFunction<U, T, U> accumulator, BinaryOperator<U> combiner)
     *
@@ -88,9 +88,9 @@ public class Stream_13 {
 
         int count = intStream1.reduce(0, (a,b) -> a + 1);
         int sum = intStream2.reduce(0, (a, b) -> a + b);
-
         OptionalInt max = intStream3.reduce(Integer::max);
         OptionalInt min = intStream4.reduce(Integer::min);
+
         System.out.println("count="+count);
         System.out.println("sum="+sum);
         System.out.println("max="+max);
